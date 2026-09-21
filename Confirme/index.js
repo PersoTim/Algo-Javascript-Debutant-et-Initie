@@ -39,7 +39,7 @@ for (const personne of nom) {
 console.log("-------")
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max)
 }
 
 function jouer(){
@@ -112,17 +112,57 @@ let messageSomme = ""
 console.log(messageSomme + " = " + somme)
 console.log("-------")
 
-let demandeFacto = Number(prompt("Un chiffre pour la somme : "))
-let facto = 1
-let messageFacto = ""
+// let demandeFacto = Number(prompt("Un chiffre pour la somme : "))
+// let facto = 1
+// let messageFacto = ""
 
-for (let i = 1; i < demandeFacto+1; i++) {
-    facto *= i
-    if (i != 1) {
-        messageFacto += " x " + i
-    } else{
-        messageFacto += i
+// for (let i = 1; i < demandeFacto+1; i++) {
+//     facto *= i
+//     if (i != 1) {
+//         messageFacto += " x " + i
+//     } else{
+//         messageFacto += i
+//     }
+
+// }
+// console.log(messageFacto + " = " + facto)
+
+
+console.log("-------")
+
+let demande = []
+let plusGrand = 0
+
+// for (let i = 1; i < 11; i++) {
+//     demande[i] = Number(prompt("Entrez le nombre " + i + ": "))
+// }
+
+
+// for (const nombre of demande) {
+//     if (nombre > plusGrand) {
+//         plusGrand = nombre
+//     }
+//     console.log("Le nombre le plus grand est : " + plusGrand)
+// }
+
+console.log("-------")
+
+let demandeFin = []
+let plusGrandFin = 0
+
+function jouer3() {
+    let nombre = Number(prompt("Entrez le nombre : "))
+
+    if (nombre !== 0) {
+        demandeFin.push(nombre)
+        jouer3()
+    } else {
+        for (const nombre of demandeFin) {
+            if (nombre > plusGrandFin) {
+                plusGrandFin = nombre
+            }
+        }
+        console.log("Le nombre le plus grand est : " + plusGrandFin)
     }
-
 }
-console.log(messageFacto + " = " + facto)
+jouer3()
