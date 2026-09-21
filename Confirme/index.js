@@ -36,3 +36,60 @@ for (const personne of nom) {
     phraseNom = ""
 }
 
+console.log("-------")
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function jouer(){
+    let nombreRandom = getRandomInt(3) + 1
+    let demande = Number(prompt("Entre un nombre entre 1 et 3 : "))
+
+    if (demande === nombreRandom) {
+        console.log("Nombre bon")
+    } else{
+        console.log("Mauvais nombre")
+        jouer()
+    }
+}
+
+// jouer()
+
+console.log("-------")
+
+function jouer2(){
+    let nombreRandom = getRandomInt(10) + 10
+    let demande = Number(prompt("Entre un nombre entre 10 et 20 : "))
+
+    console.log(nombreRandom)
+    console.log(demande)
+
+    if (demande > 20) {
+        console.log("Plus petit !")
+    } if(demande < 10) {
+        console.log("Plus grand !")
+    } if (demande === nombreRandom) {
+        console.log("Nombre bon")
+    } else{
+        console.log("Mauvais nombre")
+        jouer2()
+    }
+}
+
+// jouer2()
+
+console.log("-------")
+
+// let chiffreDix = Number(prompt("Ecrit un chiffre : "))
+
+// for (let i = chiffreDix; i < chiffreDix+11; i++) {
+//     console.log(i)
+// }
+
+console.log("-------")
+
+let demandeMulti = Number(prompt("Un chiffre pour la table : "))
+for (let i = 1; i <= 10; i++) {
+    console.log(demandeMulti + " x " + i + " = " + demandeMulti*i)
+}
