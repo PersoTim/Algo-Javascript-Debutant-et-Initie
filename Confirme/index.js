@@ -89,7 +89,40 @@ console.log("-------")
 
 console.log("-------")
 
-let demandeMulti = Number(prompt("Un chiffre pour la table : "))
-for (let i = 1; i <= 10; i++) {
-    console.log(demandeMulti + " x " + i + " = " + demandeMulti*i)
+// let demandeMulti = Number(prompt("Un chiffre pour la table : "))
+// for (let i = 1; i <= 10; i++) {
+//     console.log(demandeMulti + " x " + i + " = " + demandeMulti*i)
+// }
+
+console.log("-------")
+
+// let demandeSomme = Number(prompt("Un chiffre pour la somme : "))
+let somme = 0
+let messageSomme = ""
+
+// for (let i = 1; i < demandeSomme+1; i++) {
+//     somme += i
+//     if (i != 1) {
+//         messageSomme += " + " + i
+//     } else{
+//         messageSomme += i
+//     }
+
+// }
+console.log(messageSomme + " = " + somme)
+console.log("-------")
+
+let demandeFacto = Number(prompt("Un chiffre pour la somme : "))
+let facto = 1
+let messageFacto = ""
+
+for (let i = 1; i < demandeFacto+1; i++) {
+    facto *= i
+    if (i != 1) {
+        messageFacto += " x " + i
+    } else{
+        messageFacto += i
+    }
+
 }
+console.log(messageFacto + " = " + facto)
