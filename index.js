@@ -37,13 +37,52 @@ console.log(nombreVoyelles)
 console.log("-----------")
 
 const phrase = "Salut comment ca va"
-let tableLettre = []
+let tableLettre = {}
 
 for (const lettre of phrase) {
-    if (tableLettre.includes(lettre)) {
-        
+    if (tableLettre[lettre]) {
+        tableLettre[lettre]++
     } else {
-        tableLettre.push(lettre)
+        tableLettre[lettre] = 1
     }
-    console.log(tableLettre)
 }
+console.log(tableLettre)
+console.log("-----------")
+
+let tableau = [2, -3, 6, 9, -10, -5, 30, -152.6]
+let positifs = []
+let negatifs = []
+
+for (const chiffre of tableau) {
+    if (chiffre > 0) {
+        positifs.push(chiffre)
+    } else{
+        negatifs.push(chiffre)
+    }    
+}
+
+console.log(positifs, negatifs)
+console.log("-----------")
+
+let listeNombres = [1, 6, 5, 10, 8, 62]
+let plusGrand = []
+
+for (const chiffre of listeNombres) {
+    if (chiffre > plusGrand) {
+        plusGrand.pop()
+        plusGrand.push(chiffre)
+    }
+}
+console.log(plusGrand)
+console.log("-----------")
+
+let motInversable = "Bonjour"
+let inverse = []
+
+for (const element of motInversable) {
+    inverse.push(element)
+}
+inverse = inverse.toReversed()
+inverse = inverse.toString()
+
+console.log(inverse)
